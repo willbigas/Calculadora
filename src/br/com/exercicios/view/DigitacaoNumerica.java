@@ -1,23 +1,19 @@
 package br.com.exercicios.view;
 
-import br.com.exercicios.negocio.ManterDigitacaoNegocio;
-import br.com.exercicios.principal.Exercicio02Tela;
-
 /**
  *
  * @author William
  */
-public class DigitacaoAutomatica extends javax.swing.JFrame {
+public class DigitacaoNumerica extends javax.swing.JFrame {
 
     /**
      * Creates new form JanelaPrincipal
      *
      *
      */
-    public DigitacaoAutomatica() {
+    public DigitacaoNumerica() {
 
         initComponents();
-        campo2.setText(campo1.getText());
 
     }
 
@@ -45,6 +41,9 @@ public class DigitacaoAutomatica extends javax.swing.JFrame {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 campo1KeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                campo1KeyTyped(evt);
+            }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -67,8 +66,19 @@ public class DigitacaoAutomatica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void campo1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyPressed
-        campo2.setText(campo1.getText());
+
+
     }//GEN-LAST:event_campo1KeyPressed
+
+    private void campo1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyTyped
+        String caracteres = "0987654321";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            evt.consume();
+        } else {
+            campo2.setText(campo1.getText());
+        }
+
+    }//GEN-LAST:event_campo1KeyTyped
 
     /**
      * @param args the command line arguments
@@ -87,21 +97,23 @@ public class DigitacaoAutomatica extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DigitacaoAutomatica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DigitacaoNumerica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DigitacaoAutomatica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DigitacaoNumerica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DigitacaoAutomatica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DigitacaoNumerica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DigitacaoAutomatica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DigitacaoNumerica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DigitacaoAutomatica().setVisible(true);
+                new DigitacaoNumerica().setVisible(true);
             }
         });
     }
