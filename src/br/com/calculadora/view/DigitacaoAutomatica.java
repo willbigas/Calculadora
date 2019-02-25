@@ -1,7 +1,7 @@
 package br.com.calculadora.view;
 
 import br.com.calculadora.negocio.ManterDigitacaoNegocio;
-import br.com.calculadora.principal.Digitacao;
+import br.com.calculadora.principal.Exercicio02Tela;
 
 /**
  *
