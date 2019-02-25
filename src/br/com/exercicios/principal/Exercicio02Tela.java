@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.calculadora.principal;
+package br.com.exercicios.principal;
 
-import br.com.calculadora.view.DigitacaoAutomatica;
+import br.com.exercicios.view.DigitacaoAutomatica;
 import javax.swing.JFrame;
 
 /**

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.calculadora.principal;
+package br.com.exercicios.principal;
 
-import br.com.calculadora.view.MediaNotas;
+import br.com.exercicios.view.MediaNotas;
 import javax.swing.JFrame;
 
 /**

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.calculadora.view;
+package br.com.exercicios.view;
 
-import br.com.calculadora.negocio.ManterCalculadoraNegocio;
-import br.com.calculadora.principal.Exercicio01Calculadora;
+import br.com.exercicios.negocio.ManterCalculadoraNegocio;
+import br.com.exercicios.principal.Exercicio01Calculadora;
 
 /**
  *
