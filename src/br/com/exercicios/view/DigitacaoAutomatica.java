@@ -67,9 +67,6 @@ public class DigitacaoAutomatica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void campo1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyReleased
-        // TODO add your handling code here:
-//        campo2.setText(campo1.getText());
-
         ManterDigitacaoNegocio.escrevendo(campo1, campo2);
     }//GEN-LAST:event_campo1KeyReleased
 
