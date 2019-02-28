@@ -1,5 +1,7 @@
 package br.com.exercicios.view;
 
+import br.com.exercicios.negocio.ManterDigitacaoNumericaNegocio;
+
 /**
  *
  * @author William
@@ -14,6 +16,7 @@ public class DigitacaoNumerica extends javax.swing.JFrame {
     public DigitacaoNumerica() {
 
         initComponents();
+        String concatena = "";
 
     }
 
@@ -38,11 +41,8 @@ public class DigitacaoNumerica extends javax.swing.JFrame {
 
         campo1.setColumns(10);
         campo1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                campo1KeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                campo1KeyTyped(evt);
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                campo1KeyReleased(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -65,20 +65,9 @@ public class DigitacaoNumerica extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campo1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyPressed
-
-
-    }//GEN-LAST:event_campo1KeyPressed
-
-    private void campo1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyTyped
-        String caracteres = "0987654321";
-        if (!caracteres.contains(evt.getKeyChar() + "")) {
-            evt.consume();
-        } else {
-            campo2.setText(campo1.getText());
-        }
-
-    }//GEN-LAST:event_campo1KeyTyped
+    private void campo1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyReleased
+        ManterDigitacaoNumericaNegocio.escrevendo(campo1, campo2);
+    }//GEN-LAST:event_campo1KeyReleased
 
     /**
      * @param args the command line arguments

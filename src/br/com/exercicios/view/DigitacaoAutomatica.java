@@ -42,8 +42,8 @@ public class DigitacaoAutomatica extends javax.swing.JFrame {
 
         campo1.setColumns(10);
         campo1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                campo1KeyPressed(evt);
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                campo1KeyReleased(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -66,9 +66,12 @@ public class DigitacaoAutomatica extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campo1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyPressed
-        campo2.setText(campo1.getText());
-    }//GEN-LAST:event_campo1KeyPressed
+    private void campo1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyReleased
+        // TODO add your handling code here:
+//        campo2.setText(campo1.getText());
+
+        ManterDigitacaoNegocio.escrevendo(campo1, campo2);
+    }//GEN-LAST:event_campo1KeyReleased
 
     /**
      * @param args the command line arguments
