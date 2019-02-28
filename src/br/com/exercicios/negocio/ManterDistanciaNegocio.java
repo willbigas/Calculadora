@@ -19,10 +19,10 @@ public class ManterDistanciaNegocio {
     private JTextField campoVelocidadeMedia;
     private JTextField campoGastoCombustivel;
 
-    public ManterDistanciaNegocio(JTextField campoAutonomiaVeiculo, JTextField campoDistanciaPontos, 
+    public ManterDistanciaNegocio(JTextField campoAutonomiaVeiculo, JTextField campoDistanciaPontos,
             JTextField campoLatitudeFinal, JTextField campoLatitudeInicial, JTextField campoLongitudeFinal,
-            JTextField campoLongitudeInicial, JTextField campoTempoViagem, 
-            JTextField campoVelocidadeMedia , JTextField campoGastoCombustivel) {
+            JTextField campoLongitudeInicial, JTextField campoTempoViagem,
+            JTextField campoVelocidadeMedia, JTextField campoGastoCombustivel) {
         this.campoAutonomiaVeiculo = campoAutonomiaVeiculo;
         this.campoDistanciaPontos = campoDistanciaPontos;
         this.campoLatitudeFinal = campoLatitudeFinal;
@@ -49,10 +49,22 @@ public class ManterDistanciaNegocio {
         Double resultado = valor / Double.valueOf(String.valueOf(campoTempoViagem.getText()));
         return resultado;
     }
-    
-    public static Double calculaGastoCombustivel(Double valor , JTextField campoGastoCombustivel) {
+
+    public static Double calculaGastoCombustivel(Double valor, JTextField campoGastoCombustivel) {
         Double resultado = valor / Double.valueOf(campoGastoCombustivel.getText());
         return resultado;
+    }
+
+    public static void mostrandoTudo(JTextField campoLatitudeInicial, JTextField campoLatitudeFinal, JTextField campoTempoViagem, JTextField campoVelocidadeMedia,
+            JTextField campoGastoCombustivel, JTextField campoLongitudeInicial, JTextField campoLongitudeFinal,
+            JTextField campoDistanciaPontos, JTextField campoAutonomiaVeiculo) {
+
+        Double distancia = calculaDistancia(campoLatitudeInicial, campoLatitudeFinal, campoLongitudeInicial, campoLongitudeFinal);
+        Double velocidadeMedia = ManterDistanciaNegocio.calculaVelocidadeMedia(distancia, campoTempoViagem);
+        campoDistanciaPontos.setText(br.com.exercicios.util.UtilFormat.decimalFormat(distancia));
+        campoVelocidadeMedia.setText(br.com.exercicios.util.UtilFormat.decimalFormat(velocidadeMedia));
+        Double gastoCombustivel = ManterDistanciaNegocio.calculaGastoCombustivel(distancia, campoGastoCombustivel);
+        campoAutonomiaVeiculo.setText(br.com.exercicios.util.UtilFormat.decimalFormat(gastoCombustivel));
     }
 
 }

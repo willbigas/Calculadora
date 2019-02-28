@@ -263,14 +263,7 @@ public class DistanciaEntrePontos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCalcularActionPerformed
-        // TODO add your handling code here:
-        Double distancia = ManterDistanciaNegocio.calculaDistancia(campoLatitudeInicial,
-                campoLatitudeFinal, campoLongitudeInicial, campoLongitudeFinal);
-        Double velocidadeMedia = ManterDistanciaNegocio.calculaVelocidadeMedia(distancia, campoTempoViagem);
-        campoDistanciaPontos.setText(br.com.exercicios.util.UtilFormat.decimalFormat(distancia));
-        campoVelocidadeMedia.setText(br.com.exercicios.util.UtilFormat.decimalFormat(velocidadeMedia));
-        Double gastoCombustivel = ManterDistanciaNegocio.calculaGastoCombustivel(distancia, campoGastoCombustivel);
-        campoAutonomiaVeiculo.setText(br.com.exercicios.util.UtilFormat.decimalFormat(gastoCombustivel));
+        ManterDistanciaNegocio.mostrandoTudo(campoLatitudeInicial, campoLatitudeFinal, campoTempoViagem, campoVelocidadeMedia, campoGastoCombustivel, campoLongitudeInicial, campoLongitudeFinal, campoDistanciaPontos, campoAutonomiaVeiculo);
     }//GEN-LAST:event_buttonCalcularActionPerformed
 
     /**

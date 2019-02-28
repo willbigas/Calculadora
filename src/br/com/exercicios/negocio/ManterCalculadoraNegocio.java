@@ -50,4 +50,23 @@ public class ManterCalculadoraNegocio {
         return valorTotal;
     }
 
+    public static void executarSoma(JTextField campo1, JTextField campo2, JTextField campoResultado) {
+        String valorTotal = somarCampos(campo1, campo2);
+        campoResultado.setText(valorTotal);
+    }
+
+    public static void executarSubtracao(JTextField campo1, JTextField campo2, JTextField campoResultado) {
+        String valorTotal = ManterCalculadoraNegocio.subtrairCampos(campo1, campo2);
+        campoResultado.setText(valorTotal);
+    }
+
+    public static void executarMultiplicacao(JTextField campo1, JTextField campo2, JTextField campoResultado) {
+        String valorTotal = ManterCalculadoraNegocio.multiplicarCampos(campo1, campo2);
+        campoResultado.setText(valorTotal);
+    }
+    public static void executarDivisao(JTextField campo1, JTextField campo2, JTextField campoResultado) {
+         String valorTotal = ManterCalculadoraNegocio.dividirCampos(campo1, campo2);
+        campoResultado.setText(valorTotal);
+    }
+
 }

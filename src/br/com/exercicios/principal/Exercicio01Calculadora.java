@@ -27,12 +27,4 @@ public class Exercicio01Calculadora {
         janelaPrincipal.setVisible(true);
     }
     
-//    public static void JanelaPrincipalNula() {
-//        JanelaCalculadora janelaPrincipal = new JanelaCalculadora(null);
-//        janelaPrincipal.setTitle("JANELA PRINCIPAL");
-//        janelaPrincipal.setSize(350, 350);
-//        janelaPrincipal.setLocationRelativeTo(null);
-//        janelaPrincipal.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        janelaPrincipal.setVisible(true);
-//    }
 }

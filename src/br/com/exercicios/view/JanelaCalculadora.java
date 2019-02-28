@@ -19,7 +19,6 @@ public class JanelaCalculadora extends javax.swing.JFrame {
      */
     public JanelaCalculadora() {
         initComponents();
-//        campoResultado.setText(valor);
     }
 
     /**
@@ -136,28 +135,19 @@ public class JanelaCalculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonSomarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSomarActionPerformed
-        // TODO add your handling code here:
-        String valorTotal = ManterCalculadoraNegocio.somarCampos(campo1, campo2);
-        campoResultado.setText(valorTotal);
-//        Exercicio01Calculadora.JanelaCalculadora(valorTotal);
+        ManterCalculadoraNegocio.executarSoma(campo1, campo2, campoResultado);
     }//GEN-LAST:event_buttonSomarActionPerformed
 
     private void buttonSubtrairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSubtrairActionPerformed
-        // TODO add your handling code here:
-        String valorTotal = ManterCalculadoraNegocio.subtrairCampos(campo1, campo2);
-        campoResultado.setText(valorTotal);
+        ManterCalculadoraNegocio.executarSubtracao(campo1, campo2, campoResultado);
     }//GEN-LAST:event_buttonSubtrairActionPerformed
 
     private void buttonMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMultiplicarActionPerformed
-        // TODO add your handling code here:
-         String valorTotal = ManterCalculadoraNegocio.multiplicarCampos(campo1, campo2);
-        campoResultado.setText(valorTotal);
+        ManterCalculadoraNegocio.executarMultiplicacao(campo1, campo2, campoResultado);
     }//GEN-LAST:event_buttonMultiplicarActionPerformed
 
     private void buttonDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDividirActionPerformed
-        // TODO add your handling code here:
-         String valorTotal = ManterCalculadoraNegocio.dividirCampos(campo1, campo2);
-        campoResultado.setText(valorTotal);
+        ManterCalculadoraNegocio.executarDivisao(campo1, campo2, campoResultado);
     }//GEN-LAST:event_buttonDividirActionPerformed
 
     /**

@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.exercicios.view;
 
 import br.com.exercicios.negocio.ManterMediaNegocio;
-import java.awt.Color;
 
 /**
  *
@@ -110,16 +104,7 @@ public class MediaNotas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonGerarMediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGerarMediaActionPerformed
-        // TODO add your handling code here:
-       Double teste = ManterMediaNegocio.fazMedia(campoNota1, campoNota2, campoNota3);
-       Media.setText(br.com.exercicios.util.UtilFormat.decimalFormat(teste));
-       if (teste > 6.9) {
-           Situacao.setForeground(Color.green);
-           Situacao.setText("Aprovado");
-       } else {
-           Situacao.setForeground(Color.red);
-           Situacao.setText("Reprovado");
-       }
+        ManterMediaNegocio.gerandoMedia(campoNota1, campoNota2, campoNota3, Media, Situacao);
     }//GEN-LAST:event_buttonGerarMediaActionPerformed
 
     /**

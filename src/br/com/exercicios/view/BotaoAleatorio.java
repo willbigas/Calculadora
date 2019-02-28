@@ -5,6 +5,8 @@
  */
 package br.com.exercicios.view;
 
+import br.com.exercicios.negocio.ManterBotaoAleatorioNegocio;
+
 /**
  *
  * @author William
@@ -60,9 +62,7 @@ public class BotaoAleatorio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        jButton1.setLocation(br.com.exercicios.util.UtilMath.numRandom(50, 450),
-                br.com.exercicios.util.UtilMath.numRandom(50, 450));
+        ManterBotaoAleatorioNegocio.randomizandoBotao(jButton1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
