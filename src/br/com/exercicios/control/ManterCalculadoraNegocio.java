@@ -1,4 +1,4 @@
-package br.com.exercicios.negocio;
+package br.com.exercicios.control;
 
 import javax.swing.JTextField;
 

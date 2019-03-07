@@ -5,7 +5,7 @@
  */
 package br.com.exercicios.view;
 
-import br.com.exercicios.negocio.ManterDistanciaNegocio;
+import br.com.exercicios.control.ControlDistancia;
 
 /**
  *
@@ -30,29 +30,20 @@ public class DistanciaEntrePontos extends javax.swing.JFrame {
     private void initComponents() {
 
         textoLatitude = new javax.swing.JLabel();
-        campoLatitudeInicial = new javax.swing.JTextField();
         textoLongitude = new javax.swing.JLabel();
-        campoLongitudeInicial = new javax.swing.JTextField();
         textoTempoViagem = new javax.swing.JLabel();
-        campoTempoViagem = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         textoResultado = new javax.swing.JLabel();
         textoDistanciaPontos = new javax.swing.JLabel();
         textoVelocidadeMedia = new javax.swing.JLabel();
         textoAutonomiaVeiculo = new javax.swing.JLabel();
-        campoDistanciaPontos = new javax.swing.JTextField();
-        campoVelocidadeMedia = new javax.swing.JTextField();
-        campoAutonomiaVeiculo = new javax.swing.JTextField();
         textoLatitude2 = new javax.swing.JLabel();
         textoLongitude2 = new javax.swing.JLabel();
-        campoLatitudeFinal = new javax.swing.JTextField();
-        campoLongitudeFinal = new javax.swing.JTextField();
         textoInicial = new javax.swing.JLabel();
         textoFinal = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         buttonCalcular = new javax.swing.JButton();
         textoGastoCombustivel = new javax.swing.JLabel();
-        campoGastoCombustivel = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -151,8 +142,7 @@ public class DistanciaEntrePontos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(textoResultado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textoResultado))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,7 +253,7 @@ public class DistanciaEntrePontos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCalcularActionPerformed
-        ManterDistanciaNegocio.mostrandoTudo(campoLatitudeInicial, campoLatitudeFinal, campoTempoViagem, campoVelocidadeMedia, campoGastoCombustivel, campoLongitudeInicial, campoLongitudeFinal, campoDistanciaPontos, campoAutonomiaVeiculo);
+        ControlDistancia.mostrandoTudoAction();
     }//GEN-LAST:event_buttonCalcularActionPerformed
 
     /**
@@ -303,15 +293,15 @@ public class DistanciaEntrePontos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCalcular;
-    private javax.swing.JTextField campoAutonomiaVeiculo;
-    private javax.swing.JTextField campoDistanciaPontos;
-    private javax.swing.JTextField campoGastoCombustivel;
-    private javax.swing.JTextField campoLatitudeFinal;
-    private javax.swing.JTextField campoLatitudeInicial;
-    private javax.swing.JTextField campoLongitudeFinal;
-    private javax.swing.JTextField campoLongitudeInicial;
-    private javax.swing.JTextField campoTempoViagem;
-    private javax.swing.JTextField campoVelocidadeMedia;
+    public static final javax.swing.JTextField campoAutonomiaVeiculo = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoDistanciaPontos = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoGastoCombustivel = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoLatitudeFinal = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoLatitudeInicial = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoLongitudeFinal = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoLongitudeInicial = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoTempoViagem = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoVelocidadeMedia = new javax.swing.JTextField();
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel textoAutonomiaVeiculo;

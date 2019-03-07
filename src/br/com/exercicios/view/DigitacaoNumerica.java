@@ -1,6 +1,6 @@
 package br.com.exercicios.view;
 
-import br.com.exercicios.negocio.ManterDigitacaoNumericaNegocio;
+import br.com.exercicios.control.ManterDigitacaoNumericaNegocio;
 
 /**
  *

@@ -236,6 +236,9 @@
       <Properties>
         <Property name="columns" type="int" value="10"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoLongitude">
       <Properties>
@@ -246,6 +249,9 @@
       <Properties>
         <Property name="columns" type="int" value="10"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoTempoViagem">
       <Properties>
@@ -256,6 +262,9 @@
       <Properties>
         <Property name="columns" type="int" value="10"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
       <Properties>
@@ -288,10 +297,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="campoDistanciaPontos">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="campoVelocidadeMedia">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="campoAutonomiaVeiculo">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoLatitude2">
       <Properties>
@@ -307,11 +325,17 @@
       <Properties>
         <Property name="columns" type="int" value="10"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="campoLongitudeFinal">
       <Properties>
         <Property name="columns" type="int" value="10"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoInicial">
       <Properties>
@@ -345,6 +369,9 @@
       <Properties>
         <Property name="columns" type="int" value="10"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

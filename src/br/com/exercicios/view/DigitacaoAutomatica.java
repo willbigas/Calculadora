@@ -1,6 +1,6 @@
 package br.com.exercicios.view;
 
-import br.com.exercicios.negocio.ManterDigitacaoNegocio;
+import br.com.exercicios.control.ManterDigitacaoNegocio;
 import br.com.exercicios.principal.Exercicio02Tela;
 
 /**

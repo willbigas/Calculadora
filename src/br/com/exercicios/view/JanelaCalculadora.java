@@ -5,7 +5,7 @@
  */
 package br.com.exercicios.view;
 
-import br.com.exercicios.negocio.ManterCalculadoraNegocio;
+import br.com.exercicios.control.ManterCalculadoraNegocio;
 import br.com.exercicios.principal.Exercicio01Calculadora;
 
 /**

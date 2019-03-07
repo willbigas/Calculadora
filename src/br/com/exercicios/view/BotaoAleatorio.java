@@ -5,7 +5,7 @@
  */
 package br.com.exercicios.view;
 
-import br.com.exercicios.negocio.ManterBotaoAleatorioNegocio;
+import br.com.exercicios.control.ManterBotaoAleatorioNegocio;
 
 /**
  *
