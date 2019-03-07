@@ -64,6 +64,16 @@ public class Distancia {
 
     }
 
+    public Double GetVelocidadeMedia() {
+        Double resultado = getDistancia() / getTempo();
+        return resultado;
+    }
+
+    public Double getAutonomiaVeiculo() {
+        Double resultado = getDistancia() / getConsumo();
+        return resultado;
+    }
+
     @Override
     public String toString() {
         return "Distancia{" + "ponto1=" + ponto1 + ", ponto2=" + ponto2 + ", tempo=" + tempo + ", consumo=" + consumo + '}';
