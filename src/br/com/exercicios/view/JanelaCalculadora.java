@@ -5,8 +5,7 @@
  */
 package br.com.exercicios.view;
 
-import br.com.exercicios.control.ManterCalculadoraNegocio;
-import br.com.exercicios.principal.Exercicio01Calculadora;
+import br.com.exercicios.control.CalculadoraControl;
 
 /**
  *
@@ -14,11 +13,14 @@ import br.com.exercicios.principal.Exercicio01Calculadora;
  */
 public class JanelaCalculadora extends javax.swing.JFrame {
 
+    private CalculadoraControl calculadoraControl;
+
     /**
      * Creates new form JanelaPrincipal
      */
     public JanelaCalculadora() {
         initComponents();
+        calculadoraControl = new CalculadoraControl();
     }
 
     /**
@@ -32,13 +34,10 @@ public class JanelaCalculadora extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jLabel1 = new javax.swing.JLabel();
-        campo1 = new javax.swing.JTextField();
         buttonSomar = new javax.swing.JButton();
         buttonSubtrair = new javax.swing.JButton();
         buttonMultiplicar = new javax.swing.JButton();
         buttonDividir = new javax.swing.JButton();
-        campo2 = new javax.swing.JTextField();
-        campoResultado = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -135,19 +134,19 @@ public class JanelaCalculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonSomarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSomarActionPerformed
-        ManterCalculadoraNegocio.executarSoma(campo1, campo2, campoResultado);
+        calculadoraControl.somarAction();
     }//GEN-LAST:event_buttonSomarActionPerformed
 
     private void buttonSubtrairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSubtrairActionPerformed
-        ManterCalculadoraNegocio.executarSubtracao(campo1, campo2, campoResultado);
+        calculadoraControl.subtrairAction();
     }//GEN-LAST:event_buttonSubtrairActionPerformed
 
     private void buttonMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMultiplicarActionPerformed
-        ManterCalculadoraNegocio.executarMultiplicacao(campo1, campo2, campoResultado);
+        calculadoraControl.multiplicacaoAction();
     }//GEN-LAST:event_buttonMultiplicarActionPerformed
 
     private void buttonDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDividirActionPerformed
-        ManterCalculadoraNegocio.executarDivisao(campo1, campo2, campoResultado);
+        calculadoraControl.divisaoAction();
     }//GEN-LAST:event_buttonDividirActionPerformed
 
     /**
@@ -191,9 +190,9 @@ public class JanelaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton buttonMultiplicar;
     private javax.swing.JButton buttonSomar;
     private javax.swing.JButton buttonSubtrair;
-    private javax.swing.JTextField campo1;
-    private javax.swing.JTextField campo2;
-    private javax.swing.JTextField campoResultado;
+    public static final javax.swing.JTextField campo1 = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campo2 = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoResultado = new javax.swing.JTextField();
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

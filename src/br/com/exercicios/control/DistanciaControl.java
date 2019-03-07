@@ -8,9 +8,9 @@ import br.com.exercicios.view.DistanciaEntrePontos;
  *
  * @author William
  */
-public class ControlDistancia {
+public class DistanciaControl {
 
-    public ControlDistancia() {
+    public DistanciaControl() {
 
         resgatarDadosForm();
     }

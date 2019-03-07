@@ -5,7 +5,7 @@
  */
 package br.com.exercicios.view;
 
-import br.com.exercicios.control.ControlDistancia;
+import br.com.exercicios.control.DistanciaControl;
 
 /**
  *
@@ -253,7 +253,7 @@ public class DistanciaEntrePontos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCalcularActionPerformed
-        ControlDistancia.mostrandoTudoAction();
+        DistanciaControl.mostrandoTudoAction();
     }//GEN-LAST:event_buttonCalcularActionPerformed
 
     /**

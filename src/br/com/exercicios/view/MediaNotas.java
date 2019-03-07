@@ -1,6 +1,6 @@
 package br.com.exercicios.view;
 
-import br.com.exercicios.control.ManterMediaNegocio;
+import br.com.exercicios.control.MediaControl;
 
 /**
  *
@@ -26,11 +26,8 @@ public class MediaNotas extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         textoNota1 = new javax.swing.JLabel();
-        campoNota1 = new javax.swing.JTextField();
         textoNota2 = new javax.swing.JLabel();
-        campoNota2 = new javax.swing.JTextField();
         textoNota3 = new javax.swing.JLabel();
-        campoNota3 = new javax.swing.JTextField();
         buttonGerarMedia = new javax.swing.JButton();
         Media = new javax.swing.JLabel();
         Situacao = new javax.swing.JLabel();
@@ -104,7 +101,7 @@ public class MediaNotas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonGerarMediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGerarMediaActionPerformed
-        ManterMediaNegocio.gerandoMedia(campoNota1, campoNota2, campoNota3, Media, Situacao);
+        MediaControl.gerandoMedia(campoNota1, campoNota2, campoNota3, Media, Situacao);
     }//GEN-LAST:event_buttonGerarMediaActionPerformed
 
     /**
@@ -147,9 +144,9 @@ public class MediaNotas extends javax.swing.JFrame {
     private javax.swing.JLabel Media;
     private javax.swing.JLabel Situacao;
     private javax.swing.JButton buttonGerarMedia;
-    private javax.swing.JTextField campoNota1;
-    private javax.swing.JTextField campoNota2;
-    private javax.swing.JTextField campoNota3;
+    public static final javax.swing.JTextField campoNota1 = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoNota2 = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoNota3 = new javax.swing.JTextField();
     private javax.swing.JLabel textoNota1;
     private javax.swing.JLabel textoNota2;
     private javax.swing.JLabel textoNota3;

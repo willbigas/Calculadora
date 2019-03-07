@@ -8,7 +8,7 @@ import javax.swing.JTextField;
  *
  * @author William
  */
-public class ManterMediaNegocio {
+public class MediaControl {
 
     private JTextField campoNota1;
     private JTextField campoNota2;
@@ -16,7 +16,7 @@ public class ManterMediaNegocio {
     private JLabel Media;
     private JLabel Situacao;
 
-    public ManterMediaNegocio(JTextField campoNota1, JTextField campoNota2, JTextField campoNota3, JLabel Media, JLabel Situacao) {
+    public MediaControl(JTextField campoNota1, JTextField campoNota2, JTextField campoNota3, JLabel Media, JLabel Situacao) {
         this.campoNota1 = campoNota1;
         this.campoNota2 = campoNota2;
         this.campoNota3 = campoNota3;
@@ -34,7 +34,7 @@ public class ManterMediaNegocio {
     }
 
     public static void gerandoMedia(JTextField campoNota1, JTextField campoNota2, JTextField campoNota3, JLabel Media, JLabel Situacao) {
-        Double teste = ManterMediaNegocio.fazMedia(campoNota1, campoNota2, campoNota3);
+        Double teste = MediaControl.fazMedia(campoNota1, campoNota2, campoNota3);
         Media.setText(br.com.exercicios.util.UtilFormat.decimalFormat(teste));
         if (teste > 6.9) {
             Situacao.setForeground(Color.green);
