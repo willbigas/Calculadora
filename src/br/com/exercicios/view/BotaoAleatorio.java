@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.exercicios.view;
 
-import br.com.exercicios.control.ManterBotaoAleatorioNegocio;
+import br.com.exercicios.control.BotaoAleatorioControl;
 
 /**
  *
@@ -13,11 +8,14 @@ import br.com.exercicios.control.ManterBotaoAleatorioNegocio;
  */
 public class BotaoAleatorio extends javax.swing.JFrame {
 
+    BotaoAleatorioControl botaoAleatorioControl;
+
     /**
      * Creates new form BotaoAleatorio
      */
     public BotaoAleatorio() {
         initComponents();
+
     }
 
     /**
@@ -29,15 +27,13 @@ public class BotaoAleatorio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jButton1.setText("CLIQUE AQUI");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botaoRandomico.setText("CLIQUE AQUI");
+        botaoRandomico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botaoRandomicoActionPerformed(evt);
             }
         });
 
@@ -47,23 +43,24 @@ public class BotaoAleatorio extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(156, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(botaoRandomico)
                 .addGap(141, 141, 141))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(116, 116, 116)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botaoRandomico, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(136, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ManterBotaoAleatorioNegocio.randomizandoBotao(jButton1);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void botaoRandomicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRandomicoActionPerformed
+        botaoAleatorioControl = new BotaoAleatorioControl();
+        botaoAleatorioControl.randomizandoBotaoAction();
+    }//GEN-LAST:event_botaoRandomicoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -101,6 +98,6 @@ public class BotaoAleatorio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public static final javax.swing.JButton botaoRandomico = new javax.swing.JButton();
     // End of variables declaration//GEN-END:variables
 }
