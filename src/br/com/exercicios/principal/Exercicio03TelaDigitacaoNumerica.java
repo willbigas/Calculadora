@@ -8,7 +8,7 @@ import javax.swing.JFrame;
  *
  * @author William
  */
-public class Exercicio03TelaNumerica {
+public class Exercicio03TelaDigitacaoNumerica {
     
     public static void main(String[] args) {
         JanelaDigitacaoNumerica();

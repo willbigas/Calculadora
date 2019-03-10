@@ -12,7 +12,7 @@ import javax.swing.JFrame;
  *
  * @author William
  */
-public class Exercicio02Tela {
+public class Exercicio02TelaDigitacao {
     
     public static void main(String[] args) {
         JanelaDigitacao();

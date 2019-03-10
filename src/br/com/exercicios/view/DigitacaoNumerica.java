@@ -1,12 +1,14 @@
 package br.com.exercicios.view;
 
-import br.com.exercicios.control.ManterDigitacaoNumericaNegocio;
+import br.com.exercicios.control.DigitacaoNumericaControl;
 
 /**
  *
  * @author William
  */
 public class DigitacaoNumerica extends javax.swing.JFrame {
+
+    DigitacaoNumericaControl digitaoNumericaControl;
 
     /**
      * Creates new form JanelaPrincipal
@@ -17,6 +19,8 @@ public class DigitacaoNumerica extends javax.swing.JFrame {
 
         initComponents();
         String concatena = "";
+        digitaoNumericaControl = new DigitacaoNumericaControl();
+        digitaoNumericaControl.escrevendoAction();
 
     }
 
@@ -30,8 +34,6 @@ public class DigitacaoNumerica extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        campo1 = new javax.swing.JTextField();
-        campo2 = new javax.swing.JTextField();
         textoEscrever = new javax.swing.JLabel();
         textoResultado = new javax.swing.JLabel();
 
@@ -66,7 +68,7 @@ public class DigitacaoNumerica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void campo1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campo1KeyReleased
-        ManterDigitacaoNumericaNegocio.escrevendo(campo1, campo2);
+        digitaoNumericaControl.escrevendoAction();
     }//GEN-LAST:event_campo1KeyReleased
 
     /**
@@ -108,8 +110,8 @@ public class DigitacaoNumerica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField campo1;
-    private javax.swing.JTextField campo2;
+    public static final javax.swing.JTextField campo1 = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campo2 = new javax.swing.JTextField();
     private javax.swing.JLabel textoEscrever;
     private javax.swing.JLabel textoResultado;
     // End of variables declaration//GEN-END:variables
